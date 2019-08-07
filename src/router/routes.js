@@ -9,7 +9,7 @@ export default [
     },
     {
         path: '/article/:id',
-        name: 'show',
+        name: 'articleShow',
         component: () => import('@/pages/article/show'),
         meta: {
             title: '文章'

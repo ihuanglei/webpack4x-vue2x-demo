@@ -1,41 +1,23 @@
 <template>
   <div>
-    我是列表
-    <!-- <el-table :data="tableData" stripe style="width: 100%">
-      <el-table-column prop="date" label="Date" width="180"></el-table-column>
-      <el-table-column prop="name" label="Name" width="180"></el-table-column>
-      <el-table-column prop="address" label="Address"></el-table-column>
-    </el-table> -->
+    <ul>
+      <li>我是列表第一个<button @click="onEditClick">编辑</button><button @click="onShowClick">查看</button></li>
+    </ul>
   </div>
 </template>
 <script>
 export default {
   name: 'acticleList',
   data() {
-    return {
-      tableData: [
-        {
-          date: '2016-05-03',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        },
-        {
-          date: '2016-05-02',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        },
-        {
-          date: '2016-05-04',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        },
-        {
-          date: '2016-05-01',
-          name: 'Tom',
-          address: 'No. 189, Grove St, Los Angeles'
-        }
-      ]
-    }
+    return {}
+  },
+  methods: {
+    onEditClick: function() {
+      this.$router.push({ name: 'articleEdit', params: { id: 123 } })
+    },
+    onShowClick: function() {
+      this.$router.push({ name: 'articleShow', params: { id: 123 } })
+    },
   }
 }
 </script>
